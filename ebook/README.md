@@ -27,6 +27,15 @@ Gemini API와의 통신 메커니즘과 다양한 사용 시나리오를 실제 
 4. [도구 실행 (Tool Execution)](part2/04_tool_execution.md)
 5. [사용 시나리오](part2/05_scenarios.md)
 
+### 3부: LLM과 Agent 사이
+
+사용자 관점에서 LLM(Gemini API)과 Agent(Gemini CLI)의 역할을 명확히 구분하고, 각 기능이 어디서 처리되는지 설명합니다.
+
+1. [개요 - 역할의 구분](part3/01_overview.md)
+2. [기능별 역할 분담](part3/02_role_distribution.md)
+3. [판단과 실행의 경계](part3/03_decision_boundary.md)
+4. [흔한 오해와 명확화](part3/04_common_misconceptions.md)
+
 ## 이 책에 대하여
 
 이 전자책은 Gemini CLI 프로젝트의 실제 소스 코드를 기반으로 작성되었습니다. 각 챕터는 해당 기능을 구현하는 실제 코드 예제와 함께 제공되어, 이론과 실무를 연결하여 이해할 수 있도록 구성되었습니다.
