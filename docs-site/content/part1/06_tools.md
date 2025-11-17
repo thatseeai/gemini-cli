@@ -3,8 +3,6 @@ title: "6장. 도구 시스템 (Tool System)"
 weight: 06
 ---
 
-# 6장. 도구 시스템 (Tool System)
-
 ## 개요
 
 Gemini CLI의 도구 시스템은 LLM이 실제 작업을 수행할 수 있도록 하는 핵심 메커니즘입니다. 파일 읽기/쓰기, 셸 명령 실행, 웹 검색 등 20개 이상의 내장 도구를 제공하며, MCP (Model Context Protocol)를 통해 외부 도구와도 통합할 수 있습니다.

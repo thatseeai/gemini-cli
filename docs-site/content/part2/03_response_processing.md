@@ -3,8 +3,6 @@ title: "3장. 응답 처리 (Response Processing)"
 weight: 03
 ---
 
-# 3장. 응답 처리 (Response Processing)
-
 ## 개요
 
 이 장에서는 Gemini API로부터 받은 스트리밍 응답을 어떻게 처리하는지 살펴봅니다. 스트림 청크 파싱, 이벤트 변환, 응답 검증, 그리고 에러 처리를 실제 코드와 응답 예제와 함께 분석합니다.
