@@ -1,0 +1,31 @@
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="content">
+    <article>
+        <h1>{{ .Title }}</h1>
+
+        {{ .Content }}
+    </article>
+
+    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--border-color);">
+
+    <nav style="display: flex; justify-content: space-between; margin-top: 2rem;">
+        {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" style="text-align: left;">
+            ← 이전: {{ .Title }}
+        </a>
+        {{ else }}
+        <span></span>
+        {{ end }}
+
+        {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" style="text-align: right;">
+            다음: {{ .Title }} →
+        </a>
+        {{ else }}
+        <span></span>
+        {{ end }}
+    </nav>
+</div>
+{{ end }}
