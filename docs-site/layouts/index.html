@@ -1,0 +1,25 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="content">
+    {{ .Content }}
+
+    <h2 style="margin-top: 2rem;">모든 섹션</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+        {{ range .Site.Sections }}
+        <div style="background: var(--background); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--secondary-color);">
+            <h3 style="margin-top: 0;">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+            <ul style="list-style: none; padding-left: 0;">
+                {{ range first 8 .Pages.ByWeight }}
+                <li style="margin: 0.5rem 0;">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

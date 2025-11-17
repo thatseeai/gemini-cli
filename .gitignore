@@ -55,3 +55,9 @@ gha-creds-*.json
 patch_output.log
 
 .genkit
+
+# Hugo
+docs-site/public/
+docs-site/resources/
+.hugo_build.lock
+add-frontmatter.sh
