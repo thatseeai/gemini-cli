@@ -308,6 +308,8 @@ gemini
 - [**Tools API Development**](./docs/core/tools-api.md) - Create custom tools.
 - [**Local development**](./docs/local-development.md) - Local development
   tooling.
+- [**Internal Architecture (Korean)**](https://thatseeai.github.io/gemini-cli/) -
+  Deep dive into Gemini CLI internals (ebook format).
 
 ### Troubleshooting & Support
 
