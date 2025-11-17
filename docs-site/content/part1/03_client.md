@@ -3,8 +3,6 @@ title: "3장. GeminiClient - 클라이언트 관리자"
 weight: 03
 ---
 
-# 3장. GeminiClient - 클라이언트 관리자
-
 ## 개요
 
 `GeminiClient`는 Gemini CLI의 최상위 클라이언트 관리 클래스로, Gemini API와의 모든 상호작용을 조율합니다. 이 클래스는 대화 세션 관리, 메시지 스트리밍, 컨텍스트 압축, 모델 라우팅 등의 핵심 기능을 제공합니다.
