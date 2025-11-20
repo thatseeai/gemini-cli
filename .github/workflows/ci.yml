@@ -33,10 +33,28 @@ defaults:
     shell: 'bash'
 
 jobs:
+  # Skip CI for claude/* feature branches (used for documentation site development)
+  check_branch:
+    name: 'Check Branch'
+    runs-on: 'ubuntu-latest'
+    outputs:
+      should_skip: '${{ steps.check.outputs.should_skip }}'
+    steps:
+      - id: 'check'
+        run: |
+          if [[ "${{ github.head_ref }}" == claude/* ]] || [[ "${{ github.ref }}" == refs/heads/claude/* ]]; then
+            echo "should_skip=true" >> $GITHUB_OUTPUT
+            echo "Skipping CI for claude/* branch"
+          else
+            echo "should_skip=false" >> $GITHUB_OUTPUT
+          fi
+
   merge_queue_skipper:
     permissions: 'read-all'
     name: 'Merge Queue Skipper'
     runs-on: 'gemini-cli-ubuntu-16-core'
+    needs: ['check_branch']
+    if: needs.check_branch.outputs.should_skip != 'true'
     outputs:
       skip: '${{ steps.merge-queue-ci-skipper.outputs.skip-check }}'
     steps:
