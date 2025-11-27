@@ -4,3 +4,4 @@ docs-site/public/
 docs-site/resources/
 .hugo_build.lock
 add-frontmatter.sh
+remove-duplicate-titles.sh

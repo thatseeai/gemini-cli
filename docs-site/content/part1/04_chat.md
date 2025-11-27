@@ -3,8 +3,6 @@ title: "4장. GeminiChat - 채팅 세션 관리"
 weight: 04
 ---
 
-# 4장. GeminiChat - 채팅 세션 관리
-
 ## 개요
 
 `GeminiChat`는 개별 채팅 세션을 관리하는 핵심 클래스입니다. 대화 히스토리 유지, API 요청/응답 처리, 스트림 검증, 재시도 로직 등을 담당합니다. 이 클래스는 Google의 GenAI SDK의 Chat 클래스를 기반으로 Gemini CLI의 요구사항에 맞게 커스터마이즈되었습니다.
